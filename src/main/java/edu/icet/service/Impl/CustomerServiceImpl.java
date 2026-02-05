@@ -19,8 +19,12 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void updateCustomer(CustomerDTO customer) {
-
-
+        for(int i=0; i< customerList.size(); i++){
+            if(customerList.get(i).getId().equals(customer.getId())){
+                customerList.set(i,customer);
+                break;
+            }
+        }
     }
 
     @Override
