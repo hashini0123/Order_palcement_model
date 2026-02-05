@@ -32,5 +32,10 @@ public class CustomerController {
         customerService.updateCustomer(customer);
     }
 
+    @GetMapping("/search-By-Id{id}")
+    public CustomerDTO searchById(@PathVariable Integer id){
+        return customerService.searchById(id);
+    }
+
 
 }

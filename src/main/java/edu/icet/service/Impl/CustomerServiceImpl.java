@@ -29,11 +29,21 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void deleteCustomer(Integer id) {
-                customerList.remove(id);
+        for (CustomerDTO customer : customerList){
+            if(customer.getId().equals(id)){
+                customerList.remove(customer);
+                break;
+            }
+        }
     }
 
     @Override
-    public CustomerDTO searchById(Integer Id) {
+    public CustomerDTO searchById(Integer id) {
+        for(CustomerDTO customer : customerList){
+            if(customer.getId().equals(id)){
+                return customer;
+            }
+        }
         return null;
     }
 
