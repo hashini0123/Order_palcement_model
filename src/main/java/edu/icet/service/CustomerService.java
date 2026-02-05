@@ -10,9 +10,9 @@ public interface CustomerService {
 
     void updateCustomer(CustomerDTO customer);
 
-    void deleteCustomer(Integer Id);
+    void deleteCustomer(Integer id);
 
-    CustomerDTO searchById(Integer Id);
+    CustomerDTO searchById(Integer id);
 
     List<CustomerDTO> getAll();
 }
