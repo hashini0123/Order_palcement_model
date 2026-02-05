@@ -1,0 +1,9 @@
+Spring:
+  datasource:
+    url : jdbc:mysql://localhost:3306/order_management_db
+    username: root
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: create
