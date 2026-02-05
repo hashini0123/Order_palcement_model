@@ -19,7 +19,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void updateCustomer(CustomerDTO customer) {
-
+        customerList.update(customer.getId()-1,customer);
 
     }
 
@@ -35,6 +35,6 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<CustomerDTO> getAll() {
-        return List.of();
+        return customerList;
     }
 }
